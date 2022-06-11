@@ -1,0 +1,92 @@
+<!-- find section starts -->
+ <%- include("./include/header.ejs")%>
+ <div style="margin:    200px 0 100px 0">
+  <section class="find_section ">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="form_tab_container">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <ul class="nav " data-tabs="tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#rent" data-toggle="tab">Upload Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">back</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content text-center">
+              <div class="tab-pane active" id="rent">
+                <div class="Rent_form find_form">
+                  <form action="/upload" method="post" enctype="multipart/form-data">
+                    <div class="form-row">
+                      <div class="col-md-6 px-0">
+                        <div class="form-group ">
+                          <div class="input-group ">
+                            <label for="product file">Image or Video Document </label>
+                            <input type="file" class="form-control" name="file" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 px-0">
+                        <div class="form-group ">
+                          <div class="input-group ">
+                            <input type="text" class="form-control" name="name" placeholder="Product Name" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 px-0">
+                        <div class="form-group">
+                          <div class="input-group ">
+                            <input type="text" class="form-control" name="price" placeholder="Product Price" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 px-0">
+                        <div class="form-group">
+                          <div class="input-group ">
+                            <input type="text" class="form-control" name="category" placeholder="Product Category e.g bag, shoe e.t.c" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="col-md-12 px-0">
+                        <div class="form-group">
+                          <div class="input-group ">
+                            <textarea class="form-control" cols="" name="description" rows="80" placeholder="Enter Product Description"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-6 px-0">
+                        <div class="form-group">
+                          <div class="input-group ">
+                            <textarea class="form-control" cols="" name="description" rows="" placeholder="Enter Product Description"></textarea>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                    <div class="btn-box">
+                      <input type="submit" name="submit" value="Upload Product" class="btn btn-primary">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  </div>
+
+  <!-- find section ends -->
+
+<%- include("./include/footer.ejs") %>
